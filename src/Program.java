@@ -40,18 +40,14 @@ public class Program {
         for (Student student :studentClass1.studentList ) {
            if( student.birthday.after(stringToDate("2001-11-01"))){
                studentList1.add(student);
-               System.out.println(studentList1);
-
             }
-        }
+        } System.out.println(studentList1);
         List<Student> studentList2 = new ArrayList<>();
         for (Student student :studentClass2.studentList ) {
             if( student.birthday.after(stringToDate("2003-01-01"))){
                 studentList2.add(student);
-                System.out.println(studentList2);
-
             }
-        }
+        } System.out.println(studentList2);
 
     }
     public static Date stringToDate(String s) {
