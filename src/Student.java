@@ -2,8 +2,7 @@
 import java.util.Calendar;
 import java.util.Date;
 
-public class Student {
-
+public class Student implements Comparable<Student> {
     String firstName;
     String lastName;
     Date birthday;
@@ -29,7 +28,10 @@ public class Student {
                 '}';
     }
 
+    @Override
+    public int compareTo(Student student) {
+        return firstName.compareTo(student.firstName);
+        }
+    }
 
-
-}
 
