@@ -1,6 +1,7 @@
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Objects;
 
 public class Student implements Comparable<Student> {
     String firstName;
@@ -42,7 +43,24 @@ public class Student implements Comparable<Student> {
                 '}';
     }
 
-    //    @Override // compare by name
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return copybook == student.copybook &&
+                Objects.equals(firstName, student.firstName) &&
+                Objects.equals(lastName, student.lastName) &&
+                Objects.equals(birthday, student.birthday) &&
+                sex == student.sex;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(firstName, lastName, birthday, sex, copybook);
+    }
+//    @Override // compare by name
 //    public int compareTo(Student student) {
 //        return firstName.compareTo(student.firstName);
 //        }

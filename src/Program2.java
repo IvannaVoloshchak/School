@@ -26,20 +26,37 @@ public class Program2 {
         studentList.add(st7);
         //System.out.println(studentList);
 
+
+        Student st11 = new Student("Mark", "Spenser", stringToDate("2002-04-02"), Sex.male);
+        Student st12 = new Student("Kate", "Morton", stringToDate("2002- 07-12"), Sex.female);
+        Student st13 = new Student("Ben", "Smith", stringToDate("2001-08-10"), Sex.male);
+        Student st14 = new Student("Lee", "Stevenson", stringToDate("2003-06-29"), Sex.male);
+        Student st15 = new Student("Molly", "Longl", stringToDate("2001-04-9"), Sex.female);
+        Student st16 = new Student("Olivia", "Owen", stringToDate("2002-05-23"), Sex.female);
+        Student st17 = new Student("David", "Zmiya", stringToDate("2002-06-11"), Sex.male);
+        List<Student> studentList2 = new ArrayList<>();
+        studentList2.add(st11);
+        studentList2.add(st12);
+        studentList2.add(st13);
+        studentList2.add(st14);
+        studentList2.add(st15);
+        studentList2.add(st16);
+        studentList2.add(st17);
         List<Student> studentList1 = new ArrayList<>(studentList);
         Collections.sort(studentList1);
-        for (Student student : studentList1) {//choose that students whom born after 2001-11-01
-            if (student.birthday.after(stringToDate("2002-06-01"))) {
-                System.out.println(student);
+        Collections.sort(studentList2);
+        for (int i = 0; i < studentList.size(); i++) {
+            if (!studentList.get(i).equals(studentList1.get(i))) {
+                System.out.println("Lists are not equals");
                 break;
             }
         }
-            System.out.println(studentList1);
+        System.out.println(studentList1);
 //        System.out.println("\n" + studentList1);
 //        System.out.println(" Oldest student " + studentList1.get(0));
 //        System.out.println("Youngest  student " + studentList1.get(studentList.size()-1));
 
-        }
+    }
 
 
     public static Date stringToDate(String s) {
