@@ -36,7 +36,7 @@ public class Student implements Comparable<Student> {
         return "Student{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", birthday=" + calendar.get(Calendar.YEAR) + "/" + calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DATE) +
+                ", birthday=" + calendar.get(Calendar.YEAR) + "/" +( calendar.get(Calendar.MONTH)+1) + "/" + calendar.get(Calendar.DATE) +
                 ", sex=" + sex + '\'' +
                 ", copybook= " + copybook +
                 '}';

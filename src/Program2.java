@@ -27,15 +27,17 @@ public class Program2 {
         //System.out.println(studentList);
 
         List<Student> studentList1 = new ArrayList<>(studentList);
-//        Collections.sort(studentList1);
-//            if (stringToDate().after(stringToDate("2002-06-01"))) {
-//                studentList1.add(student);
-//                break;
-//            }
+        Collections.sort(studentList1);
+        for (Student student : studentList1) {//choose that students whom born after 2001-11-01
+            if (student.birthday.after(stringToDate("2002-06-01"))) {
+                System.out.println(student);
+                break;
+            }
+        }
             System.out.println(studentList1);
-        System.out.println("\n" + studentList1);
-        System.out.println(" Oldest student " + studentList1.get(0));
-        System.out.println("Youngest  student " + studentList1.get(studentList.size()-1));
+//        System.out.println("\n" + studentList1);
+//        System.out.println(" Oldest student " + studentList1.get(0));
+//        System.out.println("Youngest  student " + studentList1.get(studentList.size()-1));
 
         }
 
