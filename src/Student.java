@@ -23,6 +23,9 @@ public class Student implements Comparable<Student> {
         birthday = bd;
         sex = s;
     }
+    String getFirstName(){
+        return firstName;
+    }
 
     @Override
     public String toString() {
