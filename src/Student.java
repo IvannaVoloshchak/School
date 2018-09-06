@@ -9,6 +9,7 @@ public class Student implements Comparable<Student> {
     Sex sex;
     int copybook;
 
+
     public int getCopybook() {
         return copybook;
     }
@@ -20,10 +21,11 @@ public class Student implements Comparable<Student> {
     Student(String fn, String ln, Date bd, Sex s) {
         firstName = fn;
         lastName = ln;
-        birthday = bd;
+        birthday=bd;
         sex = s;
+        copybook = 15;
     }
-    String getFirstName(){
+        String getFirstName(){
         return firstName;
     }
 
@@ -44,20 +46,22 @@ public class Student implements Comparable<Student> {
 //    public int compareTo(Student student) {
 //        return firstName.compareTo(student.firstName);
 //        }
-//    @Override  //compare by date
-//    public int compareTo(Student student) {
-//        return birthday.compareTo(student.birthday);
-//    }
-    @Override // compare by int variable
+
+    @Override  //compare by date
     public int compareTo(Student student) {
-        if (copybook==student.copybook){
-            return 0;
-        }else if(copybook>student.copybook){
-            return 1;
-        }else {
-            return -1;
-        }
+        return birthday.compareTo(student.birthday);
     }
+
+//    @Override // compare by int variable
+//    public int compareTo(Student student) {
+//        if (copybook==student.copybook){
+//            return 0;
+//        }else if(copybook>student.copybook){
+//            return 1;
+//        }else {
+//            return -1;
+//        }
+//    }
 }
 
 

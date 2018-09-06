@@ -14,7 +14,7 @@ public class Program {
         // Student st3 = new Student("Ben", "Smith", new Date(2001, 8, 10), Sex.male);// using java constructor
         Student st3 = new Student("Ben", "Smith", birthday3, Sex.male);
         StudentClass studentClass1 = new StudentClass("A", 11);
-        st1.setCopybook(12);
+        st1.setCopybook(10);
         st2.setCopybook(12);
         st3.setCopybook(13);
         // int result = st1.compareTo(st2);  //sorted by comparable checking results for two students
@@ -24,12 +24,12 @@ public class Program {
         studentClass1.add(st2);
         studentClass1.add(st3);
 
-        // System.out.println("\n" + studentClass1.studentList.get(1));
-        // System.out.println(studentClass1);
+         System.out.println("\n" + studentClass1.studentList.get(1));
+         System.out.println(studentClass1);
 
-        StudentComparator studentComparator = new StudentComparator(); //sorted by comparator checking results for two students
-        int result = studentComparator.compare(st1, st2);
-        System.out.println(result);
+//        StudentComparator studentComparator = new StudentComparator(); //sorted by comparator checking results for two students
+//        int result = studentComparator.compare(st1, st2);
+//        System.out.println(result);
 
         Date birthday11 = stringToDate("2003-06-29");
         Date birthday12 = stringToDate("2001-04-9");
@@ -53,14 +53,14 @@ public class Program {
             studentList1.add(student);
         }
         Collections.sort(studentList1);
-        // System.out.println("\n" + studentList1);
+         System.out.println("\n" + studentList1);
 
 
-        for (Student student : studentClass1.studentList) {
+        for (Student student : studentClass1.studentList) { // sorting using Comparator
             studentList1.add(student);
         }
         Collections.sort(studentList1, new StudentComparator());
-        System.out.println("\n" + studentList1);
+        //System.out.println("\n" + studentList1);
 
 
         for (Student student : studentClass1.studentList) {//choose that students whom born after 2001-11-01
@@ -68,6 +68,7 @@ public class Program {
                 studentList1.add(student);
             }
         } //System.out.println(studentList1);
+
 
         List<Student> studentList2 = new ArrayList<>();// choose that student which born after 2003-01-01
         for (Student student : studentClass2.studentList) {
