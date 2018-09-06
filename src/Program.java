@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
-
         Date birthday1 = stringToDate("2002-04-02");
         Date birthday2 = stringToDate("2002- 07-12");//date by using method
 //       Date birthday3 = new Date(2001, 8, 10);// date by using java constructor
@@ -15,6 +14,9 @@ public class Program {
         // Student st3 = new Student("Ben", "Smith", new Date(2001, 8, 10), Sex.male);// using java constructor
         Student st3 = new Student("Ben", "Smith", birthday3, Sex.male);
         StudentClass studentClass1 = new StudentClass("A", 11);
+        st1.setCopybook(15);
+        st2.setCopybook(12);
+        st3.setCopybook(13);
         int result = st1.compareTo(st2);
         System.out.println(result);
 
@@ -22,6 +24,7 @@ public class Program {
         studentClass1.add(st2);
         studentClass1.add(st3);
         // System.out.println("\n" + studentClass1.studentList.get(1));
+        System.out.println(studentClass1);
 
         Date birthday11 = stringToDate("2003-06-29");
         Date birthday12 = stringToDate("2001-04-9");
@@ -38,6 +41,7 @@ public class Program {
         studentClass2.add(st13);
         studentClass2.add(st14);
         // System.out.println(studentClass2.studentList.get(1));
+
 
         List<Student> studentList1 = new ArrayList<>();
         for (Student student : studentClass1.studentList) {

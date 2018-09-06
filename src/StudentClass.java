@@ -9,21 +9,20 @@ public class StudentClass {
     int number;
 
     List<Student> studentList = new ArrayList<>();
-
     void add(Student student) {
         studentList.add(student);
     }
-    StudentClass(String className, int number){
-    String cl=className;
-    int num= number;
-    }
 
+    StudentClass(String cl, int num){
+   className=cl;
+   number=num;
+    }
 
     @Override
     public String toString() {
         return "StudentClass{" +
                 "className='" + className + '\'' +
-                ", number=" + number +
+                ", number=" + number+'\'' +
                 ", studentList=" + studentList +
                 '}';
     }
