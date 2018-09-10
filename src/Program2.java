@@ -1,4 +1,6 @@
 
+import org.apache.log4j.Logger;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,8 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 public class Program2 {
+    public static Logger consLogger = Logger.getLogger("CONS");
     public static void main(String[] args) {
-
         Student st1 = new Student("Mark", "Spenser", stringToDate("2002-04-02"), Sex.male);
         Student st2 = new Student("Kate", "Morton", stringToDate("2002- 07-12"), Sex.female);
         Student st3 = new Student("Ben", "Smith", stringToDate("2001-08-10"), Sex.male);
@@ -24,7 +26,7 @@ public class Program2 {
         studentList.add(st5);
         studentList.add(st6);
         studentList.add(st7);
-        //System.out.println(studentList);
+        consLogger.info ( studentList);
 
 
         Student st11 = new Student("Mark", "Spenser", stringToDate("2002-04-02"), Sex.male);
@@ -47,11 +49,11 @@ public class Program2 {
         Collections.sort(studentList2);
         for (int i = 0; i < studentList.size(); i++) {
             if (!studentList.get(i).equals(studentList1.get(i))) {
-                System.out.println("Lists are not equals");
+                consLogger.warn(" Lists are not equals");
                 break;
             }
         }
-        System.out.println(studentList1);
+        consLogger.info(studentList1);
 //        System.out.println("\n" + studentList1);
 //        System.out.println(" Oldest student " + studentList1.get(0));
 //        System.out.println("Youngest  student " + studentList1.get(studentList.size()-1));

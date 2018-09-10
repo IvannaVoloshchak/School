@@ -1,9 +1,12 @@
 
+import org.apache.log4j.Logger;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
 public class Student implements Comparable<Student> {
+   public  static Logger filelogger = Logger.getLogger("FILELOGGER");
     String firstName;
     String lastName;
     Date birthday;
@@ -15,6 +18,7 @@ public class Student implements Comparable<Student> {
         return copybook;
     }
 
+
     public void setCopybook(int copybook) {
         this.copybook = copybook;
     }
@@ -25,6 +29,7 @@ public class Student implements Comparable<Student> {
         birthday=bd;
         sex = s;
         copybook = 15;
+        filelogger.info(this);
     }
         String getFirstName(){
         return firstName;
