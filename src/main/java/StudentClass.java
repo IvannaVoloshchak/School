@@ -1,14 +1,11 @@
-
 import java.util.ArrayList;
-
-
 import java.util.List;
 
 public class StudentClass {
     String className;
     int number;
 
-    List<Student> studentList = new ArrayList<>();
+    List<Student> studentList = new ArrayList<Student>();
     void add(Student student) {
         studentList.add(student);
     }

@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Student implements Comparable<Student> {
-   public  static Logger filelogger = Logger.getLogger("FILELOGGER");
+    public  static Logger filelogger = Logger.getLogger("FILELOGGER");
     String firstName;
     String lastName;
     Date birthday;
@@ -29,7 +29,7 @@ public class Student implements Comparable<Student> {
         birthday=bd;
         sex = s;
         copybook = 15;
-        filelogger.info(this);
+       filelogger.info(this);
     }
         String getFirstName(){
         return firstName;
