@@ -1,3 +1,5 @@
+package school;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -9,9 +11,9 @@ import java.util.List;
 
 public class Program2 {
     public static Logger consLogger = Logger.getLogger("CONS");
-     static String log4jConfPath = "C:\\Users\\User\\Project\\src\\main\\resources\\log4j.properties";
 
     public static void main(String[] args) {
+        String log4jConfPath = "C:\\Users\\User\\Project\\src\\main\\resources\\log4j.properties";
         PropertyConfigurator.configure(log4jConfPath);
         Student st1 = new Student("Mark", "Spenser", stringToDate("2002-04-02"), Sex.male);
         Student st2 = new Student("Kate", "Morton", stringToDate("2002- 07-12"), Sex.female);

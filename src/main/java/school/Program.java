@@ -1,3 +1,5 @@
+package school;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,7 +15,7 @@ public class Program {
 
         Student st1 = new Student("Mark", "Spenser", birthday1, Sex.male);
         Student st2 = new Student("Kate", "Morton", birthday2, Sex.female);
-        // Student st3 = new Student("Ben", "Smith", new Date(2001, 8, 10), Sex.male);// using java constructor
+        // school.Student st3 = new school.Student("Ben", "Smith", new Date(2001, 8, 10), school.Sex.male);// using java constructor
         Student st3 = new Student("Ben", "Smith", birthday3, Sex.male);
         StudentClass studentClass1 = new StudentClass("A", 11);
         st1.setCopybook(10);
@@ -29,7 +31,7 @@ public class Program {
          System.out.println("\n" + studentClass1.studentList.get(1));
          System.out.println(studentClass1);
 
-//        StudentComparator studentComparator = new StudentComparator(); //sorted by comparator checking results for two students
+//        school.StudentComparator studentComparator = new school.StudentComparator(); //sorted by comparator checking results for two students
 //        int result = studentComparator.compare(st1, st2);
 //        System.out.println(result);
 

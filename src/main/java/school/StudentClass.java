@@ -1,3 +1,5 @@
+package school;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +19,7 @@ public class StudentClass {
 
     @Override
     public String toString() {
-        return "StudentClass{" +
+        return "school.StudentClass{" +
                 "className='" + className + '\'' +
                 ", number=" + number+'\'' +
                 ", studentList=" + studentList +

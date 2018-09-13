@@ -1,3 +1,4 @@
+package school;
 
 import org.apache.log4j.Logger;
 
@@ -39,7 +40,7 @@ public class Student implements Comparable<Student> {
     public String toString() {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(birthday);
-        return "Student{" +
+        return "school.Student{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", birthday=" + calendar.get(Calendar.YEAR) + "/" +( calendar.get(Calendar.MONTH)+1) + "/" + calendar.get(Calendar.DATE) +
@@ -66,7 +67,7 @@ public class Student implements Comparable<Student> {
         return Objects.hash(firstName, lastName, birthday, sex, copybook);
     }
 //    @Override // compare by name
-//    public int compareTo(Student student) {
+//    public int compareTo(school.Student student) {
 //        return firstName.compareTo(student.firstName);
 //        }
 
@@ -76,7 +77,7 @@ public class Student implements Comparable<Student> {
     }
 
 //    @Override // compare by int variable
-//    public int compareTo(Student student) {
+//    public int compareTo(school.Student student) {
 //        if (copybook==student.copybook){
 //            return 0;
 //        }else if(copybook>student.copybook){
