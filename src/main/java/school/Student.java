@@ -30,7 +30,7 @@ public class Student implements Comparable<Student> {
         birthday=bd;
         sex = s;
         copybook = 15;
-       filelogger.info(this);
+       //filelogger.info(this);
     }
         String getFirstName(){
         return firstName;
